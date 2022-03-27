@@ -8,9 +8,9 @@ const mas = [];
 
 function generate(n, m) {
   var i;
-  for (i = 0; i < m; i++) {
-    mas.push(Math.floor(Math.random() * m) + n)
-  } 
+  for (i = n; i < m + 1; i++) {
+    mas.push(Math.floor(Math.random() * (m - n)) + n)
+  }
 }
 
 generate(-5, 5);

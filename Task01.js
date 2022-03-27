@@ -8,7 +8,7 @@ const mas = [];
 function generate(n) {
   var i;
   for (i = 0; i < n; i++) {
-    mas.push(Math.floor(Math.random() * 100) + 1)
+    mas.push(Math.floor(Math.random() * (100+1)) + 1)
   } 
 }
 

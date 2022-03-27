@@ -5,12 +5,17 @@
 //если функция получает 'odd', то функция возвращает массив нечётных чисел
 const mas = [];
 
-function generate(aa, n, m, tt) {
+function generate(n, m, parametr) {
   var i;
-  for (i = 0; i < m; i++) {
-    mas.push(Math.floor(Math.random() * m) + n)
+  for (i = n; i < m + n + 1; i++) {
+    const number = Math.floor(Math.random() * (m - n)) + n;
+    if (number % 2 == 0 && parametr == 'even') {
+      mas.push(number);
+    } else if (number % 2 != 0 && parametr == 'odd') {
+      mas.push(number);
+    }
   } 
 }
 
-generate(100, 5, 12, 'even');
+generate(5, 15, 'even');  //если ввести 'odd', в массив попадут нечетные
 console.log(mas)
